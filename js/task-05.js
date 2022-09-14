@@ -1,13 +1,13 @@
-const inputForm = document.querySelector("#name-input");
-const outputForm = document.querySelector("#name-output");
+const inputRef = document.querySelector("#name-input");
+const outputRef = document.querySelector("#name-output");
 
-inputForm.addEventListener("keydown", logMessage);
+inputRef.addEventListener("input", logMessage);
 
-// function logMessage() {
-// 	let log = inputForm.value;
-// 	if (log === "") {
-// 		outputForm.textContent = "Anonymous";
-// 	} else {
-// 		outputForm.textContent = log;
-// 	}
-// }
+function logMessage() {
+	let log = inputRef.value.trim();
+	if (log === "") {
+		outputRef.textContent = "Anonymous";
+	} else {
+		outputRef.textContent = log;
+	}
+}
