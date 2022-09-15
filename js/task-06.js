@@ -3,7 +3,9 @@ const inputRef = document.querySelector("#validation-input");
 inputRef.addEventListener("blur", validateLog);
 
 function validateLog() {
-	if (inputRef.value.length === Number(inputRef.dataset.length)) {
+	if (inputRef.value === "") {
+		inputRef.removeAttribute("class");
+	} else if (inputRef.value.length === Number(inputRef.dataset.length)) {
 		inputRef.classList.remove("invalid");
 		inputRef.classList.add("valid");
 	} else {
