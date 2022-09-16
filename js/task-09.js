@@ -1,7 +1,6 @@
 const colorRef = document.querySelector(".color");
 const changeColorBtnRef = document.querySelector(".change-color");
 const bodyRef = document.querySelector("body");
-console.dir(colorRef);
 
 changeColorBtnRef.addEventListener("click", getRandomHexColor);
 
